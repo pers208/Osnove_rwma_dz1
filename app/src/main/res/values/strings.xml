@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Osnove_rwma_dz1</string>
+    <string name="person1Name">Elon Musk</string>
+    <string name="person1Year">1971</string>
+    <string name="person1Inspiration">Elon Reeve Musk is a business magnate, industrial designer, engineer, and philanthropist. He is the founder, CEO, CTO and chief designer of SpaceX, early investor, CEO and product architect of Tesla, Inc., founder of The Boring Company, co-founder of Neuralink, and co-founder and initial co-chairman of OpenAI.</string>
+    <string name="person2Name">Kobe Bryant</string>
+    <string name="person2Year">1978-2020</string>
+    <string name="person2Inspiration">Kobe Bean Bryant was an American professional basketball player. A shooting guard, he spent his entire 20-year career with the Los Angeles Lakers in the National Basketball Association (NBA). Regarded as one of the greatest players of all time, Bryant won five NBA championships, and was an 18-time All-Star, a 15-time member of the All-NBA Team, a 12-time member of the All-Defensive Team, the 2008 NBA Most Valuable Player (MVP), and a two-time NBA Finals MVP.</string>
+    <string name="person3Name">Luka Perković</string>
+    <string name="person3Year">1998</string>
+    <string name="person3Inspiration">Luka Perković, better known as Perkz, is a Croatian professional League of Legends player who is the bot laner for G2 Esports of the LEC. He was named Rookie of the Split for the 2016 Spring EU LCS, which G2 won. He is the only European professional player to hold eight EU LCS/LEC titles.</string>
+    <string name="person1InspirationGen">Elon Musk is the founder, CEO, CTO and chief designer of SpaceX, early investor, CEO and product architect of Tesla, Inc., founder of The Boring Company...</string>
+    <string name="person2InspirationGen">Kobe Bryant won five NBA championships, and was an 18-time All-Star, a 15-time member of the All-NBA Team....</string>
+    <string name="person3InspirationGen">Luka Perković is the only European professional League of Legends player to hold eight EU LCS/LEC titles.</string>
+</resources>

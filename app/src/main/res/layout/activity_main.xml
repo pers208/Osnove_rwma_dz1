@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--Splitting the screen in half is solved by making a linear layout whose weight sum we use to split the screen in two-->
+    <LinearLayout
+        android:id="@+id/inspirationLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnGenerateInspiration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:onClick="btnInspirationOnClick"
+            android:text="Inspiration"/>
+        <!-- I put this element as a textview considering function vise, it wouldn't make any difference if it was something more complex -->
+        <TextView android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/btnGenerateInspiration"
+            android:text="TOP 3"/>
+    </LinearLayout>
+
+    <!--for each of the inspirational people i made a seperate relative layout because its easier to position them
+     that way, I put picture first and the rest of the elements were easy to place because I put the orientation horizontal-->
+    <RelativeLayout
+        android:id="@+id/person1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inspirationLayout"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/person1Image"
+            android:layout_width="200px"
+            android:src="@drawable/elon"
+            android:layout_height="200px"
+            android:onClick="person1OnClick"></ImageView>
+        <TextView
+            android:id="@+id/twPerson1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/person1Name"
+            android:textSize="15dp"
+            android:layout_toRightOf="@+id/person1Image"
+            android:textColor="@color/black"></TextView>
+        <TextView
+            android:id="@+id/twPerson1Year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/person1Image"
+            android:layout_below="@+id/twPerson1"
+            android:text="@string/person1Year"></TextView>
+        <TextView
+            android:id="@+id/twPerson1Inspirational"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/person1Image"
+            android:layout_below="@+id/twPerson1Year"
+            android:textColor="@color/black"
+            android:maxLines = "2"
+            android:ellipsize = "end"
+            android:text="@string/person1Inspiration"></TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/person2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/person1"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/person2Image"
+            android:layout_width="200px"
+            android:src="@drawable/kobe"
+            android:layout_height="200px"
+            android:onClick="person2OnClick"></ImageView>
+        <TextView
+            android:id="@+id/twPerson2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/person2Name"
+            android:textSize="15dp"
+            android:layout_toRightOf="@+id/person2Image"
+            android:textColor="@color/black"></TextView>
+        <TextView
+            android:id="@+id/twPerson2Year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/person2Image"
+            android:layout_below="@+id/twPerson2"
+            android:text="@string/person2Year"></TextView>
+        <TextView
+            android:id="@+id/twPerson2Inspirational"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/person2Image"
+            android:layout_below="@+id/twPerson2Year"
+            android:textColor="@color/black"
+
+            android:maxLines = "2"
+            android:ellipsize = "end"
+            android:text="@string/person2Inspiration"></TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/person3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/person2"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/person3Image"
+            android:layout_width="200px"
+            android:src="@drawable/perkz"
+            android:layout_height="200px"
+            android:onClick="person3OnClick"></ImageView>
+        <TextView
+            android:id="@+id/twPerson3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/person3Name"
+            android:textSize="15dp"
+            android:layout_toRightOf="@+id/person3Image"
+            android:textColor="@color/black"></TextView>
+        <TextView
+            android:id="@+id/twPerson3Year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/person3Image"
+            android:layout_below="@+id/twPerson3"
+            android:text="@string/person3Year"></TextView>
+        <TextView
+            android:id="@+id/twPerson3Inspirational"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/person3Image"
+            android:layout_below="@+id/twPerson3Year"
+            android:textColor="@color/black"
+            android:maxLines = "2"
+            android:ellipsize = "end"
+            android:text="@string/person3Inspiration"></TextView>
+    </RelativeLayout>
+    <!--I placed the radiogroup at the bottom first and then just put other elements above each other -->
+    <EditText
+        android:id="@+id/etNewDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnEditInspiration"
+        android:hint="Edit new description"></EditText>
+    <Button
+        android:id="@+id/btnEditInspiration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit description"
+        android:onClick="btnEditInspirationOnClick"
+        android:layout_above="@id/rgEditTextRadioGroup"></Button>
+    <RadioGroup
+        android:id="@+id/rgEditTextRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+        <RadioButton
+            android:id="@+id/rbFirstPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="First Person"
+            ></RadioButton>
+        <RadioButton
+            android:id="@+id/rbSecondPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Second Person"
+            ></RadioButton>
+        <RadioButton
+            android:id="@+id/rbThirdPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Third Person"
+            ></RadioButton>
+    </RadioGroup>
+</RelativeLayout>
